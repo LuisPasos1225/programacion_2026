@@ -1,4 +1,4 @@
-# \# Programacion 2026
+# \# PASOS TZAB LUIS ANGEL - Programacion 2026
 
 # Repositorio de la materia Programación.
 #Pasos Tzab Luis Ángel.
