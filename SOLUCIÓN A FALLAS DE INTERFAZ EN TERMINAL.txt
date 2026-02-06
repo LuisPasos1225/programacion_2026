@@ -1,0 +1,30 @@
+El funcionamiento incorrecto del programa no se debía a errores en la lógica ni a fallos en la implementación de la clase, sino a un problema de codificación de caracteres en la consola de Windows. Por defecto, la consola no utiliza UTF-8, lo que provoca que los caracteres especiales del español, como acentos y la letra ñ, se muestren de forma incorrecta aun cuando el archivo fuente esté correctamente guardado en ese formato.
+
+Para corregir este comportamiento, se incorporó la librería específica de Windows que permite manipular la configuración de la consola:
+
+CPP;
+#include <windows.h>
+
+Posteriormente, al inicio de la función |main|, se forzó explícitamente el uso de UTF-8 tanto para la salida como para la entrada de datos mediante las siguientes instrucciones:
+
+SetConsoleOutputCP(CP_UTF8);
+SetConsoleCP(CP_UTF8);
+
+La función |SetConsoleOutputCP(CP_UTF8)| establece la página de códigos UTF-8 para la salida de texto, garantizando que los mensajes mostrados con |std::cout| se visualicen correctamente. Por su parte, |SetConsoleCP(CP_UTF8)| configura la consola para que cualquier entrada de texto sea interpretada también bajo el mismo estándar de codificación.
+
+Además, se mantuvo la inclusión de la librería estándar de entrada y salida:
+
+cpp
+#include <iostream>
+
+y se conservó la llamada final
+
+cpp
+system("pause");
+
+con el objetivo de evitar que la ventana de la consola se cierre inmediatamente después de la ejecución del programa, permitiendo al usuario visualizar correctamente los resultados.
+
+Gracias a la inclusión de estas configuraciones, el programa comenzó a mostrar correctamente los textos en español sin alterar su estructura ni su funcionamiento interno. En esencia, la corrección consistió en adaptar el entorno de ejecución para que interpretara adecuadamente el contenido del programa, demostrando que el error no residía en el código lógico, sino en la forma en que la consola manejaba la codificación de caracteres.
+
+El ejemplo más claro esta en mi tarea Ejercicio_01 y en la carpeta ejemplos.
+
