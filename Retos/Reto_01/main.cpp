@@ -6,7 +6,7 @@
 #include "autobus.h"
 
 int main() {
-    // 1. Crear objetos
+    // 1. Crear objetos de las distintas clases
     Coche miCoche("Toyota", "Corolla", 2022, "ABC-123", 4);
     Moto miMoto("Yamaha", "MT-07", 2023, "MOT-99", false);
     Camion miCamion("Volvo", "FH16", 2020, "TRK-500", 25.5);
@@ -15,9 +15,10 @@ int main() {
     miCoche.mostrarInformacion();
     miMoto.mostrarInformacion();
 
-    // 2. Gestionar cambio de placas
-    std::cout << "\n--- PROCESO DE CAMBIO DE PLACAS ---" << std::endl;
+    // 2. Gestionar cambio de placas solicitado por el reto
     std::string nuevaPlaca;
+    
+    std::cout << "\n--- PROCESO DE CAMBIO DE PLACAS ---" << std::endl;
     
     std::cout << "Ingrese la nueva placa para el coche Toyota: ";
     std::cin >> nuevaPlaca;
@@ -27,7 +28,7 @@ int main() {
     std::cin >> nuevaPlaca;
     miMoto.actualizarPlaca(nuevaPlaca);
 
-    // 3. Mostrar resultados finales
+
     std::cout << "\n--- ESTADO FINAL ---" << std::endl;
     miCoche.mostrarInformacion();
     miMoto.mostrarInformacion();
