@@ -8,7 +8,7 @@ protected:
     std::string marca;
     std::string modelo;
     int anio;
-    std::string placa; // Nuevo atributo solicitado
+    std::string placa; 
 
 public:
     Vehiculo();
@@ -17,9 +17,9 @@ public:
     void actualizarMarca(std::string nuevaMarca);
     void actualizarModelo(std::string nuevoModelo);
     void actualizarAnio(int nuevoAnio);
-    void actualizarPlaca(std::string nuevaPlaca); // Para el reto
+    void actualizarPlaca(std::string nuevaPlaca); 
 
-    virtual void mostrarInformacion(); // Se recomienda virtual para herencia
+    virtual void mostrarInformacion(); 
 
     std::string obtenerMarca();
     std::string obtenerModelo();
