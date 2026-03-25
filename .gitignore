@@ -1,4 +1,4 @@
-# Carpetas pesadas y librerías
+# Carpetas pesadas
 vcpkg/
 curl-8.19.0_2-win64-mingw/
 output/
@@ -9,6 +9,9 @@ output/
 curl
 proyecto
 
-# Archivos de configuración y temporales
+# Temporales
 .env
 response.json
+
+# Ignorar carpeta de ejercicio con rama propia
+Ejercicio_3_Polimorfismo/
