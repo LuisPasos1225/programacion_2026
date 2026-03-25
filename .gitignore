@@ -1,0 +1,14 @@
+# Carpetas pesadas y librerías
+vcpkg/
+curl-8.19.0_2-win64-mingw/
+output/
+
+# Ejecutables y comprimidos
+*.exe
+*.zip
+curl
+proyecto
+
+# Archivos de configuración y temporales
+.env
+response.json
